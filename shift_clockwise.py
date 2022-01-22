@@ -32,7 +32,6 @@ for i in range( (n+1)//2 ):
         prev = curr
         for j in range(i+1, n-i):
             curr = matrix[j][n-i -1]
-            #print(curr, j)
             matrix[j][n-i -1] = prev
             prev = curr
 
@@ -53,44 +52,31 @@ for i in range( (n+1)//2 ):
     
     
     else:
+        
         # counterclockwise
         
-
         #left
         prev = matrix[i][i]
         for j in range(i+1, n-i):
         
             curr  = matrix[j][i]
-            #print(j, i, curr, prev)
             matrix[j][i] = prev
-            #print('trr')
-            #output_matrix(matrix)
             prev = curr
-            #print(prev)
-            #print()
-        #print()
-
         
-
         # down
         prev = curr
-        #print(prev)
         for j in range(i+1, n-i):
             curr = matrix[n -i - 1][j]
             matrix[n-i -1][j] = prev
             prev = curr
 
-        
-
         # right
         prev = curr
-        #print(prev)
         for j in range(n-i -1 -1, i-1, -1):
             curr = matrix[j][n-i -1]
             
             matrix[j][n-i -1] = prev
             prev = curr
-        
         
         
         # up
@@ -102,5 +88,4 @@ for i in range( (n+1)//2 ):
         
 
     
-            
 output_matrix(matrix)
